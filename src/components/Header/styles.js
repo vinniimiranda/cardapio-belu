@@ -10,7 +10,7 @@ export const AddressBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
+  padding: 0 0.5rem;
   span {
     margin-left: 0.3rem;
     color: #fff;
@@ -176,6 +176,7 @@ export const Hours = styled.div`
   width: 15rem;
   box-shadow: 0px 10px 10px #00000040;
   opacity: ${props => (props.visible ? 1 : 0)};
+  z-index: ${props => (props.visible ? 1 : -1)};;
   transition: opacity 0.6s ease;
 
   @media(max-width: 425px) {
