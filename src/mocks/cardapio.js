@@ -9,7 +9,7 @@ export default [
       },
       {
         titulo: 'Saída requeijão',
-        descricao: '',
+        descricao: 'Pão francês com requeijão',
         preco: 4.5,
       },
     ],

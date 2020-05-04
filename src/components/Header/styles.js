@@ -155,7 +155,7 @@ export const OpeningHours = styled.div`
 
   span {
     font-weight: bold;
-    color: #c00;
+    color: ${props => props.situacaoDia ? '#0c0' : "#c00"};
     font-size: 1rem;
   }
   p {
@@ -196,6 +196,7 @@ export const Hours = styled.div`
         margin-left: 0.4rem;
         margin-bottom: 0.4rem;
         font-weight: normal;
+        text-transform: capitalize;
       }
       .hora {
         background-color: #ddd;

@@ -17,16 +17,17 @@ import {
 } from './styles';
 
 import atendimento from '../../mocks/atendimento';
+import { situacaoDia } from '../../utils/datas';
 
 function Header({ visible, setVisible }) {
   
+  const { funcionando, abreAmanha, dia } = situacaoDia()
+
   return (
     <Container>
       <AddressBar>
         <FaMapMarkerAlt color="#ccc" size={12} />
-        <span>
-          Rua Dr. Pelágio Marques, 272 casa 2 – Vila Matilde – SP
-        </span>
+        <span>Rua Dr. Pelágio Marques, 272 casa 2 – Vila Matilde – SP</span>
       </AddressBar>
       <Brand>
         <div id="logo">
@@ -54,11 +55,11 @@ function Header({ visible, setVisible }) {
             </div>
           </Contacts>
         </Info>
-        <OpeningHours onClick={() => setVisible(!visible)}>
+        <OpeningHours onClick={() => setVisible(!visible)} situacaoDia={funcionando}>
           <FaClock size={12} color="#999" id="icon" />
-          <span>Abriremos hoje</span>
+          <span>{!abreAmanha ? 'Estamos abertos' : 'Abriremos amanhã'}</span>
           <p>
-            das 09:00 às 18:00
+            das {atendimento.find(a => a.day === dia).horario}
             <FaChevronDown
               size={10}
               color="#333"
