@@ -18,14 +18,14 @@ import {
 
 import atendimento from '../../mocks/atendimento';
 
-function Header() {
-  const [visible, setVisible] = useState(false);
+function Header({ visible, setVisible }) {
+  
   return (
     <Container>
       <AddressBar>
         <FaMapMarkerAlt color="#ccc" size={12} />
         <span>
-          Rua Dr. Pelágio Marques, 272 casa 2 – Vila Matilde – São Paulo
+          Rua Dr. Pelágio Marques, 272 casa 2 – Vila Matilde – SP
         </span>
       </AddressBar>
       <Brand>
@@ -37,7 +37,7 @@ function Header() {
         </div>
         <Info>
           <span id="ramo">Cafeteria</span>
-          <h3 id="nome-empresa">Belu Cafeteria</h3>
+          <h3 id="nome-empresa">Bëlu Cafeteria</h3>
 
           <Contacts>
             <div className="telefone">

@@ -3,9 +3,9 @@ import Select from '../Select';
 
 import { Container } from './styles';
 
-function Menu() {
+function Menu({ setVisible }) {
   return (
-    <Container>
+    <Container onClick={() => setVisible(false)}>
       <Select></Select>
     </Container>
   );

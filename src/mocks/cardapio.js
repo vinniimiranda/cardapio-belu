@@ -3,129 +3,14 @@ export default [
     categoira: 'Matinais',
     produtos: [
       {
-        titulo: 'Tomate seco com alho e bacon',
-        descricao: '123456',
-        preco: '7,50',
+        titulo: 'Pão na chapa',
+        descricao: '',
+        preco: 3.5,
       },
       {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco com alho e bacon',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-    ],
-  },
-  {
-    categoira: 'Lanches',
-    produtos: [
-      {
-        titulo: 'Tomate seco com alho e bacon',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco com alho e bacon',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
-      },
-      {
-        titulo: 'Tomate seco',
-        descricao: '123456',
-        preco: '7,50',
+        titulo: 'Saída requeijão',
+        descricao: '',
+        preco: 4.5,
       },
     ],
   },
