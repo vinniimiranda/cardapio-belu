@@ -58,7 +58,7 @@ export const Container = styled.div`
       justify-content: space-between;
 
       svg {
-          margin-right: .6rem;
+        margin-right: 0.6rem;
       }
     }
   }
@@ -189,6 +189,34 @@ export const CardPedido = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
+
+    .forma-de-entrega {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0;
+      .linha {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        background-color: #f3f3f3;
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        &:first-child {
+          margin-right: 1rem;
+        }
+        label {
+          font-size: 1rem;
+          margin-right: 0.3rem;
+          font-weight: bold;
+          color: #333;
+        }
+        input {
+          width: 2rem;
+          height: 1.5em;
+        }
+      }
+    }
     .titulo {
       display: flex;
       align-items: center;
@@ -212,7 +240,6 @@ export const CardPedido = styled.div`
       display: flex;
       flex-wrap: wrap;
       @media (max-width: 425px) {
-        
       }
       input {
         padding: 1rem 1rem;
@@ -226,9 +253,9 @@ export const CardPedido = styled.div`
           margin-right: 0.5rem;
         }
       }
+
       .nome {
         flex: 1;
-        
       }
       .cep {
         width: 8rem;
@@ -238,6 +265,7 @@ export const CardPedido = styled.div`
       }
       .numero {
         width: 5rem;
+        margin-right: 0;
         @media (max-width: 425px) {
           align-self: flex-start;
           /* flex: 1; */
@@ -274,7 +302,9 @@ export const CardPedido = styled.div`
         background-color: #f3f3f3;
         border: 1px solid #ccc;
         padding: 0.5rem;
-        margin-right: 1rem;
+        &:first-child {
+          margin-right: 1rem;
+        }
         label {
           font-size: 1rem;
           margin-right: 0.3rem;
@@ -287,8 +317,22 @@ export const CardPedido = styled.div`
         }
       }
     }
+    .troco {
+      display: flex;
+      margin-top: 1rem;
+      justify-content: flex-start;
+
+      input {
+        flex: 1;
+        padding: 1rem 1rem;
+        border-radius: 0.4rem;
+        border: 1px solid #ccc;
+        
+        margin-bottom: 1rem;
+      }
+    }
   }
-  .finalizar{ 
-      margin-top: 2rem;
+  .finalizar {
+    margin-top: 2rem;
   }
 `;

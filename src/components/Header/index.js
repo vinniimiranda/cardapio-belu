@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   FaMapMarkerAlt,
   FaPhoneVolume,
@@ -39,7 +39,7 @@ function Header({ visible, setVisible }) {
         </div>
         <Info>
           <span id="ramo">Cafeteria</span>
-          <h3 id="nome-empresa">Bëlu Cafeteria</h3>
+          <h3 id="nome-empresa">Bēllu Cafeteria</h3>
 
           <Contacts>
             <div className="telefone">

@@ -7,7 +7,7 @@ import CarrinhoContext from '../../CarrinhoContext';
 import { situacaoDia } from '../../utils/datas';
 
 function Carrinho({ history }) {
-  const { total, quantidade, setCarrinho } = useContext(CarrinhoContext);
+  const { total, quantidade } = useContext(CarrinhoContext);
   const { funcionando } = situacaoDia();
   
   function checkout() {

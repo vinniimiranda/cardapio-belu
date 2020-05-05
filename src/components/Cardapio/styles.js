@@ -23,7 +23,7 @@ export const Container = styled.div`
   ul {
     display: flex;
     flex-direction: column;
-
+    margin-bottom: 2rem;
     li {
       display: flex;
       justify-content: space-between;
@@ -78,6 +78,7 @@ export const Container = styled.div`
             font-size: 1.2rem;
             font-weight: bold;
             border: 1px solid #666;
+            ${props => !props.funcionando && `cursor: not-allowed; color: #999;border: 1px solid #ccc;` }
           }
           input {
             padding: 0.85rem;

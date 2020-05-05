@@ -2,11 +2,13 @@ import React, { useContext } from 'react';
 
 import { Container } from './styles';
 import CarrinhoContext from '../../CarrinhoContext';
+import { situacaoDia } from '../../utils/datas';
 
 function Cardapio({ categoria, lista = [], setVisible }) {
   const { total, quantidade, produtos, setCarrinho } = useContext(
     CarrinhoContext
   );
+  const { funcionando } = situacaoDia();
 
   function adicionaProduto(produto) {
     const productIndex = produtos.findIndex(p => p.titulo === produto.titulo);
@@ -58,7 +60,7 @@ function Cardapio({ categoria, lista = [], setVisible }) {
   console.log(produtos);
 
   return (
-    <Container onClick={() => setVisible(false)}>
+    <Container onClick={() => setVisible(false)} funcionando={funcionando}>
       <h2 id={categoria}>{categoria}</h2>
       <ul className="lista-por-categoria">
         {lista.map(produto => (
@@ -78,10 +80,12 @@ function Cardapio({ categoria, lista = [], setVisible }) {
                 <button
                   className="menos"
                   onClick={() => removeProduto(produto)}
+                  disabled={!funcionando}
                 >
                   -
                 </button>
                 <input
+                  readOnly
                   value={
                     produtos.find(prod => prod.titulo === produto.titulo)
                       ? produtos.find(prod => prod.titulo === produto.titulo)
@@ -92,6 +96,7 @@ function Cardapio({ categoria, lista = [], setVisible }) {
                 <button
                   className="mais"
                   onClick={() => adicionaProduto(produto)}
+                  disabled={!funcionando}
                 >
                   +
                 </button>

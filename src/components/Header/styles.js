@@ -3,6 +3,7 @@ import { colors } from '../../styles/colors';
 
 export const Container = styled.div`
   background-color: ${colors.background};
+  
 `;
 
 export const AddressBar = styled.div`

@@ -2,28 +2,15 @@ import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 import { Container, Card, Hours } from './styles';
 import atendimento from '../../mocks/atendimento';
-import { situacaoDia } from '../../utils/datas';
+import useModalHook from '../../hooks/modalHook';
 
 function Modal() {
-  const { funcionando } = situacaoDia();
-  const [open, setOpen] = useState(false);
-  const dia = moment().format('dddd');
-
-  useEffect(() => {
-    const closed = localStorage.getItem('closeModal');
-    if (!funcionando && closed != dia) {
-      setOpen(true);
-    }
-  }, []);
-
-  function closeModal() {
-    localStorage.setItem('closeModal', dia);
-    setOpen(false);
-  }
+  const { open, closeModal } = useModalHook();
+  
   return (
     <Container open={open}>
       <Card>
-        <button onClick={closeModal}>Close</button>
+        <button className="close" onClick={closeModal}>X</button>
         <h1>Horário de funcionamento</h1>
 
         <h2>

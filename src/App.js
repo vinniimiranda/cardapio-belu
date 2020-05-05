@@ -7,12 +7,17 @@ import './config/ReactotronConfig';
 import CarrinhoContext from './CarrinhoContext';
 
 function App() {
-  const [carrinho, setCarrinho] = useState({total: 0.00, quantidade: 0, produtos: []});
+  const [carrinho, setCarrinho] = useState({
+    total: 0.0,
+    quantidade: 0,
+    produtos: [],
+  });
+
   return (
     <>
       <CarrinhoContext.Provider value={{ ...carrinho, setCarrinho }}>
         <Routes />
-        <GlobalStyle />
+        <GlobalStyle  />
       </CarrinhoContext.Provider>
     </>
   );

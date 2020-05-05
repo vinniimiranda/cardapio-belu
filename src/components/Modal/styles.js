@@ -7,17 +7,43 @@ export const Container = styled.div`
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.55);
+  z-index: 3;
+  @media (max-width: 425px) {
+    height: 100vh;
+  }
+
+  /* overflow: hidden; */
 `;
 
 export const Card = styled.div`
   background-color: #fff;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
-  width: 37%;
+  width: 45%;
   border-radius: 0.4rem;
   margin: auto;
   margin-top: 2rem;
   padding: 1rem 2rem;
+  position: relative;
 
+  .close {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+
+    background-color: #666;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+  }
+
+  @media (max-width: 425px) {
+    margin-top: 1rem;
+    width: 90%;
+    height: 100vh;
+  }
   h1 {
     font-size: 2rem;
 
@@ -33,7 +59,7 @@ export const Card = styled.div`
 `;
 
 export const Hours = styled.div`
-  height: 28rem;
+  height: 30rem;
   background-color: #fff;
   width: 100%;
   border-radius: 0.4rem;
@@ -49,6 +75,10 @@ export const Hours = styled.div`
     list-style: none;
     padding-top: 1rem;
 
+    @media (max-width: 425px) {
+      height: 25rem;
+      overflow-y: scroll;
+    }
     li {
       .dia {
         margin-top: 0.4rem;

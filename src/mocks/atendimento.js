@@ -2,7 +2,7 @@ export default [
   {
     dia: 'Domingo',
     horario: '09:00 às 12:00',
-    day: 'Sunday'
+    day: 'Sunday',
   },
   {
     dia: 'Segunda-feira',
@@ -16,23 +16,22 @@ export default [
   },
   {
     dia: 'Quarta-feira',
-    horario: '09:00 às 12:00',
+    horario: '09:00 às 15:00',
     day: 'Wednesday',
-
   },
   {
     dia: 'Quinta-feira',
     horario: '09:00 às 12:00',
-    day: 'Thursday'
+    day: 'Thursday',
   },
   {
     dia: 'Sexta-feira',
     horario: '09:00 às 12:00',
-    day: 'Friday'
+    day: 'Friday',
   },
   {
     dia: 'Sábado',
     horario: '09:00 às 12:00',
-    day: 'Saturday'
+    day: 'Saturday',
   },
 ];
