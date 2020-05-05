@@ -6,7 +6,7 @@ export default [
   },
   {
     dia: 'Segunda-feira',
-    horario: '09:00 às 13:20',
+    horario: '09:00 às 23:20',
     day: 'Monday',
   },
   {

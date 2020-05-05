@@ -7,7 +7,7 @@ import cardapio from '../../mocks/cardapio';
 import Carrinho from '../../components/Carrinho';
 import Modal from '../../components/Modal';
 
-export default function Main() {
+export default function Main({ history }) {
   const [visible, setVisible] = useState(false);
   return (
     <div>
@@ -16,7 +16,7 @@ export default function Main() {
       {cardapio.map(item => (
         <Cardapio setVisible={setVisible}  key={item.categoira} categoria={item.categoira} lista={item.produtos} />
       ))}
-      <Carrinho />
+      <Carrinho history={history} />
       <Modal />
     </div>
   );

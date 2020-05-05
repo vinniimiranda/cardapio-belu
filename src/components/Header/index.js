@@ -23,6 +23,7 @@ function Header({ visible, setVisible }) {
   
   const { funcionando, abreAmanha, dia } = situacaoDia()
 
+  
   return (
     <Container>
       <AddressBar>

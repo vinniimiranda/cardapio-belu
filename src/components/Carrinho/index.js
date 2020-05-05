@@ -4,9 +4,19 @@ import { Container, Cesta, Continue } from './styles';
 
 import { FaShoppingBasket } from 'react-icons/fa';
 import CarrinhoContext from '../../CarrinhoContext';
+import { situacaoDia } from '../../utils/datas';
 
-function Carrinho() {
+function Carrinho({ history }) {
   const { total, quantidade, setCarrinho } = useContext(CarrinhoContext);
+  const { funcionando } = situacaoDia();
+  
+  function checkout() {
+    if (quantidade > 0 && funcionando) {
+      history.push('/checkout');
+    } 
+    
+  }
+
   return (
     <Container>
       <Cesta>
@@ -24,8 +34,8 @@ function Carrinho() {
         </span>
         <span className="quantidade">{quantidade}</span>
       </Cesta>
-      <Continue>
-        <button>Continuar</button>
+      <Continue disabled={quantidade <= 0 || !funcionando}>
+        <button onClick={checkout}>Continuar</button>
       </Continue>
     </Container>
   );

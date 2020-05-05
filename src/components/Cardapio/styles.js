@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { colors } from '../../styles/colors';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  margin: 2rem 0.5rem;
+  margin: 4rem 0.5rem;
 
   @media (min-width: 426px) {
     margin-left: 4rem;
@@ -14,10 +15,10 @@ export const Container = styled.div`
   h2 {
     font-size: 1.6rem;
     text-align: center;
-    /* text-decoration: underline; */
-    color: #4e90dd;
+    color: ${colors.primary};
     margin-bottom: 1rem;
     border-bottom: 1px dotted #ccc;
+    margin-top: 1rem;
   }
   ul {
     display: flex;

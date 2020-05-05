@@ -73,15 +73,16 @@ export const Cesta = styled.div`
 
 export const Continue = styled.div`
   flex: 1;
-  
+
   button {
-    box-shadow: 0 2px 0px rgba(0, 60, 0, .35);
+    box-shadow: 0 2px 0px rgba(0, 60, 0, 0.35);
 
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: #22a200;
+    background-color: ${props => (props.disabled ? '#999' : '#22a200')};
+    cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
     font-size: 1.3rem;
     padding: 1.3rem;
     font-weight: bold;

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { colors } from '../../styles/colors';
 
 export const Container = styled.div`
-  background-color: #4e90dd;
+  background-color: ${colors.background};
 `;
 
 export const AddressBar = styled.div`
@@ -13,7 +14,7 @@ export const AddressBar = styled.div`
   padding: 0 0.5rem;
   span {
     margin-left: 0.3rem;
-    color: #fff;
+    color: ${colors.text};
     font-weight: bold;
   }
 
@@ -70,7 +71,7 @@ export const Info = styled.div`
   flex-direction: column;
   margin-left: 1.3rem;
 
-  color: #fff;
+  color: ${colors.text};
   position: relative;
 
   #ramo {
@@ -110,7 +111,7 @@ export const Contacts = styled.div`
     background-color: #0000004a;
     padding: 0.8rem;
     padding-left: 0;
-    color: #fff;
+    color: ${colors.text};
 
     margin-top: 1rem;
     border-radius: 0.3rem;
@@ -155,7 +156,7 @@ export const OpeningHours = styled.div`
 
   span {
     font-weight: bold;
-    color: ${props => props.situacaoDia ? '#0c0' : "#c00"};
+    color: ${props => (props.situacaoDia ? '#0c0' : '#c00')};
     font-size: 1rem;
   }
   p {
@@ -163,7 +164,7 @@ export const OpeningHours = styled.div`
     font-size: 1rem;
   }
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     right: 1rem;
   }
 `;
@@ -177,11 +178,11 @@ export const Hours = styled.div`
   width: 15rem;
   box-shadow: 0px 10px 10px #00000040;
   opacity: ${props => (props.visible ? 1 : 0)};
-  z-index: ${props => (props.visible ? 1 : -1)};;
+  z-index: ${props => (props.visible ? 1 : -1)};
   transition: all 0.4s ease;
   transform-origin: top bottom;
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     right: 1rem;
   }
 
