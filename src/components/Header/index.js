@@ -52,7 +52,7 @@ function Header({ visible, setVisible }) {
               <div className="icon">
                 <FaMobileAlt size={20} color="#fff" />
               </div>
-              <span>(11) 91234-5678</span>
+              <span>(11) 98814-7747</span>
             </div>
           </Contacts>
         </Info>
