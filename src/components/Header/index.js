@@ -58,7 +58,7 @@ function Header({ visible, setVisible }) {
         </Info>
         <OpeningHours onClick={() => setVisible(!visible)} situacaoDia={funcionando}>
           <FaClock size={12} color="#999" id="icon" />
-          <span>{!abreAmanha ? 'Estamos abertos' : 'Abriremos amanhã'}</span>
+          <span>{!abreAmanha && funcionando ? 'Estamos abertos' : !abreAmanha && !funcionando ? 'Abriremos hoje' : 'Abriremos amanhã' }</span>
           <p>
             das {atendimento.find(a => a.day === dia).horario}
             <FaChevronDown
