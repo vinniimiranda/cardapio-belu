@@ -39,7 +39,7 @@ function Header({ visible, setVisible }) {
         </div>
         <Info>
           <span id="ramo">Cafeteria</span>
-          <h3 id="nome-empresa">Bēllu Cafeteria</h3>
+          <h3 id="nome-empresa">Bēlu Cafeteria</h3>
 
           <Contacts>
             <div className="telefone">
